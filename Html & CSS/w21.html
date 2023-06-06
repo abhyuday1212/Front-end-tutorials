@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CSS Display Property</title>
+      <style>
+            * {
+                  box-sizing: border-box;
+            }
+
+            img {
+                  margin: auto;
+                  display: block;
+                  width: 34px;
+
+
+            }
+
+            header {
+                  margin: auto;
+                  /* margin auto basically left aur right ke elements ko balance krk balance kr deti hai */
+                  border: 2px solid red;
+            }
+
+            h2 {
+                  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                  margin: 0px;
+                  text-align: center;
+
+
+            }
+
+            .container {
+
+                  width: 1200px;
+                  margin: auto;
+                  border: 2px solid black;
+            }
+
+            .box {
+                  border: 2px solid red;
+                  background-color: skyblue;
+                  margin: 4px;
+                  padding: 23px;
+                  display: block;
+                  width: 33%;
+
+                  /* ------------------------------------------------------------ */
+
+                  box-sizing: border-box;
+
+
+                  /* box sizing border box krne se  toatal width is included of margin and padding nhi to width ki wjh se margin and padding change ho jayega */
+
+
+                  /* border-box tells the browser to account for any border and padding in the values you specify for an element's width and height. If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width. */
+
+
+                  display: inline-block;
+            }
+      </style>
+</head>
+
+<body>
+      <header class="top">
+            <img src="https://source.unsplash.com/collection/190727/720x600/?fitness,gym" alt="">
+            <h2> Abhyudays vlog</h2>
+      </header>
+
+      <div class="container">
+            <div class="box">
+                  <h4 class="heading"> Heading </h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus rem ad consectetur esse
+                        suscipit velit, ullam reiciendis dignissimos voluptatem aut molestiae ipsum, dolorum accusantium
+                        consequatur quae. Eius debitis voluptates laborum rerum numquam sint praesentium corporis at
+                        animi ab. Magni nisi voluptatibus quisquam inventore minus!</p>
+            </div>
+   
+
+
+      <div class="box">
+            <h4 class="heading"> Heading </h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus rem ad consectetur esse
+                  suscipit velit, ullam reiciendis dignissimos voluptatem aut molestiae ipsum, dolorum accusantium
+                  consequatur quae. Eius debitis voluptates laborum rerum numquam sint praesentium corporis at
+                  animi ab. Magni nisi voluptatibus quisquam inventore minus!</p>
+      </div>
+
+
+      <div class="box">
+            <h4 class="heading"> Heading </h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus rem ad consectetur esse
+                  suscipit velit, ullam reiciendis dignissimos voluptatem aut molestiae ipsum, dolorum accusantium
+                  consequatur quae. Eius debitis voluptates laborum rerum numquam sint praesentium corporis at
+                  animi ab. Magni nisi voluptatibus quisquam inventore minus!</p>
+      </div>
+      </div>
+</div>
+
+</body>
+
+</html>

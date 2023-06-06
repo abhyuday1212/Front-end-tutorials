@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>More On Selectors </title>
+      <style>
+            h2 {
+                  background-color: brown;
+                  color: yellow;
+                  font-weight: bold;
+                  text-align: center;
+
+            }
+            /* If p is contained by any li which is contained by div  */
+
+
+
+
+/* div > p is used when :div k ander agla element p hona chaiye  */
+            /* div > p {  
+                  color: yellow;
+                  font-weight: bold;
+                  background-color: crimson;
+            } */
+
+
+
+
+            /* ye aisa paragraph dhudhega ki jiska pichla sibbling div ho */
+            div + p {  
+                  color: yellow;
+                  font-weight: bold;
+                  background-color: crimson;
+            }
+      </style>
+</head>
+
+<body>
+      <h2>This is more on Selectors </h2>
+      <div class="container">
+
+            <div class="row">
+                  <ul>
+                        <li class="item">
+                              <p>This is another paragraph inside li </p>
+                        </li>
+
+                  </ul>
+                  <p>This is a Paragraph </p>
+            </div>
+
+            <p>This is another Paragraph </p>
+      </div>
+
+      <p>This is outermost Paragraph </p>
+</body>
+
+</html>

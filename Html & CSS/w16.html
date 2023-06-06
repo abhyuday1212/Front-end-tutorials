@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>height,width,borders and background </title>
+      <style>
+            #firstpara {
+                  background-color: bisque;
+                  height: 100px;
+                  width: 455x;
+                  border-color: green;
+                  border-style: solid;
+                  /* or we can simply right border: solid green */
+
+                  border-width: 2px;
+                  border-radius: 10px;
+            }
+
+            #secondpara {
+                  background-color: beige;
+                  height: 100px;
+                  width: 455px;
+                  border-top: 2px solid violet;
+                  border-right: 2px solid black;
+                  border-bottom: 2px solid violet;
+                  border-left: 2px solid black;
+                  border-top-right-radius: 14px;
+                  border-top-left-radius: 4px;
+
+            }
+
+            #thirdpara {
+                  color: bisque;
+                  height: 900px;
+                  width: 1600px;
+                  background-image: url(https://source.unsplash.com/collection/190727/720x600/?solarsystem);
+                  border: 2px solid red;
+                  background-repeat: no-repeat;
+                  /*repeat-x and repeat-y will make them repeat in their respective axises*/
+                  background-position: center;
+            }
+      </style>
+</head>
+
+<body>
+      <h1> This is Heading </h1>
+      <p id="firstpara"> This is a Paragraph </p>
+      <h1> This is second Heading </h1>
+      <p id="secondpara"> This is second Paragraph </p>
+      <h1> This is third Heading </h1>
+      <p id="thirdpara"> This is third Paragraph </p>
+</body>
+
+</html>

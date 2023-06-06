@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Before and after pseudo Selectors</title>
+      <style>
+            body {
+
+                  margin: 0px;
+                  padding: 0px;
+                  background-color: black;
+                  color: white;
+                  height: auto;
+                  width: auto;
+
+            }
+
+            header::before {
+                  background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center/cover;
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  z-index: -1;
+                  opacity: 0.2;
+            }
+
+            header {
+
+                  display: flex;
+                  flex-direction: column;
+
+            }
+
+            .navigation {
+                  font-size: 20px;
+                  display: flex;
+                  /* flex-direction: column; */
+
+            }
+
+            li {
+                  list-style: none;
+                  padding: 20px 23px;
+            }
+
+            .navbar li a {
+                  color: white;
+                  text-decoration: none;
+
+            }
+
+            .navbar li a:hover {
+                  color: red;
+                  animation: alternate-reverse;
+
+
+
+
+
+
+
+            }
+
+
+
+            section {
+
+
+                  height: 344px;
+                  justify-content: center;
+                  margin: 3px 23px;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  /* border: 2px solid yellow; */
+                  width: auto;
+
+            }
+
+            /* Pseudo-selector */
+            /* section::before {
+                  content: "This is a content ";
+
+            } */
+
+            /* section::after {
+                  content: "This is a after pseudo selector";
+
+            } */
+
+            h1 {
+                  font-size: 4rem;
+
+            }
+
+            p {
+                  text-align: center;
+
+            }
+      </style>
+</head>
+
+<body>
+      <header>
+            <nav class="navbar">
+                  <ul class="navigation">
+                        <li class="item" id="item1"><a href="https://www.google.com">Home</a> </li>
+                        <li class="item" id="item2"><a href="#">About</a></li>
+                        <li class="item" id="item3"><a href="#">Services</a></li>
+                        <li class="item" id="item4"><a href="#">Contact Us </a></li>
+                  </ul>
+            </nav>
+
+
+      </header>
+
+      <section>
+
+            <h1>Welcome to coding world </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, sint laudantium? Libero minima cudskh
+                  djkhsn sdjbj jds dlkshf ksf ,ndivn hsdij ab ea ducimus necessitatibus distinctio, iure accusantium. Et
+                  aut vitae natus incidunt est
+                  pariatur corrupti mollitia cupiditate odit! Adipisci, eligendi illo?</p>
+
+      </section>
+
+      <script>
+            let a = " akhilesh "
+            console.log(a)
+           // Prompt in JS
+let age  = prompt("What is your name?", "enter the age");
+if (age > 18) {
+      console.log("you can go to bangkok ")
+}
+else {
+      console.log("you cant tumsa na ho paya g a ")
+}
+
+console.log(age);
+      </script>
+</body>
+
+</html>

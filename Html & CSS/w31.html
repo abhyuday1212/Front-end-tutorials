@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Box shadow and text shadow</title>
+      <style>
+            .container {
+                  display: flex;
+
+
+            }
+
+            .card {
+                  padding: 23px 12px;
+                  margin: 23px 12px;
+                  border: 2px solid red;
+                  background-color: antiquewhite;
+
+
+                  /* box-shadow: 10px 13px green;
+                  box-shadow: -5px -7px green; */
+
+
+                  /* box-shadow: offset-x offset-y color                  /* box-shadow: offset-x offset-y blur radius color */
+                  /* box-shadow: offset-x offset-y blur radius spread radius color */
+
+
+                  /* niche dalmi to possitive use kre r agr up dalni ho to negative use kre box shaddow  */
+
+                  /* box-shadow: -10px -13px 10px green; */
+
+
+                  /* last wla 10 px blur radius h */
+
+
+                  /* box-shadow: -7px -5px 10px 9px rgb(129, 11, 11) ; */
+
+
+
+
+                  /* inward krne k liye shadow */
+                  box-shadow: inset -3px -5px green, 4px 6px red;
+
+
+            }
+            .card h2{
+                  text-shadow: 3px 4px 10px rgb(255, 255, 255);
+            }
+      </style>
+</head>
+
+<body>
+      <div class="container">
+            <div class="card" id="card1">
+                  <h2>This is c++ course</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore explicabo voluptates nam
+                        perspiciatis accusantium repellendus molestias quaerat voluptatibus harum, provident, quisquam
+                        libero ut eum natus commodi voluptatem porro cupiditate aliquam. Quidem necessitatibus
+                        laudantium unde?</p>
+            </div>
+
+
+            <div class="card" id="card1">
+                  <h2>This is html course</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore explicabo voluptates nam
+                        perspiciatis accusantium repellendus molestias quaerat voluptatibus harum, provident, quisquam
+                        libero ut eum natus commodi voluptatem porro cupiditate aliquam. Quidem necessitatibus
+                        laudantium unde?</p>
+            </div>
+
+
+            <div class="card" id="card1">
+                  <h2>This is css course</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore explicabo voluptates nam
+                        perspiciatis accusantium repellendus molestias quaerat voluptatibus harum, provident, quisquam
+                        libero ut eum natus commodi voluptatem porro cupiditate aliquam. Quidem necessitatibus
+                        laudantium unde?</p>
+            </div>
+
+
+      </div>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Navigation</title>
+      <style>
+            .navbar {
+                  background-color: rgb(255, 193, 5);
+                  border-radius: 30px;
+            }
+
+            .navbar li {
+                  float: left;
+                  /* float use krne k wjh se background color nhi show hota */
+
+
+                  list-style: none;
+                  /* bullet ko  htane ki liye list style use krte hai */
+                  margin: 13px 20px;
+            }
+
+            .navbar ul {
+                  overflow: auto;
+                  /* float k problem ko solve krne k liye */
+            }
+
+            .navbar li a {
+                  padding: 3px 3px;
+                  text-decoration:none;
+                  color: black;
+            }
+
+            .search {
+                  float: right;
+                  padding: 13px 75px;
+            }
+
+            .navbar input {
+                  border: 2px solid black;
+                  border-radius: 20px;
+                  padding: 3px;
+            }
+            .navbar li a:hover{
+                  color: red;
+                  border: 2px solid black;
+                  border-radius: 20px;
+                  
+
+            }
+      </style>
+
+
+</head>
+
+<body>
+      <header>
+            <nav class="navbar">
+                  <ul>
+                        <li><a href="https://google.com " target="_blank">Home</a></li>
+                        <li><a href="#"> About      </a></li>
+                        <li><a href="#"> Services   </a></li>
+                        <li><a href="#"> Contact Us </a></li>
+
+                        <div class="search">
+                              <input type="text" name="search" class="search" placeholder="Search ">
+                        </div>
+                  </ul>
+            </nav>
+      </header>
+
+</body>
+
+</html>

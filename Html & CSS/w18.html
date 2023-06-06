@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Alignment</title>
+      <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+      <style>
+            * {
+                  box-sizing: border-box;
+            }
+
+            body {
+                  font-family: 'ubuntu', sans-serif;
+            }
+
+            .container {
+                  
+                  /* (ganda lag rha tha isliye htaya) */
+                  width: 900px;
+                  border: 2px solid rgb(6, 6, 7);
+
+                  /* margin: 33px auto; */
+
+                  /* kisi dabbe ko centre krna ho to margin auto use krte h */
+                  background-color: rgb(169, 111, 107);
+
+            }
+
+            .item {
+                  border: 3px solid rgb(9, 11, 10);
+                  margin: 12px 3px;
+                  padding: 12px 3px;
+                  background-color: rgb(117, 255, 227);
+
+            }
+
+            #fruit {
+                  float: right;
+                  width: 47.5%;
+                  text-align: center;
+
+
+            }
+
+            #computer {
+                  float: left;
+                  width: 48%;
+                  
+               
+            }
+
+            #stationary {
+                  /* float: left; */
+                  clear: both;
+                  clear: left;
+
+                  /* koi v float element nhi allow krega */
+                  width: 99.5%;
+                  
+                  
+                  
+            }
+           p,h2,h1{
+                  /* text-align: left;
+                  text-align: right; */
+                  text-align: right;
+                  text-align: center;
+                  
+                
+            }
+            h1{
+                  text-align: center;
+                  margin: auto;
+                  width: 455px;
+            }
+            
+      </style>
+</head>
+
+<body>
+      
+      <div class="container">
+            <h1 > Welcome to my store</h1>
+            <div id="fruit" class="item">
+                  <h2> fruit </h2>
+                  <p id="fruit" class="para">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus repudiandae dolorem, ab veniam minus nemo provident laboriosam? Soluta quia earum velit, rem architecto ullam sunt nulla quo? Laboriosam, odit cum!
+
+                  </p>
+            </div>
+      </div>
+      <div class="container">
+            <div id="computer" class="item">
+                  <h2> computer</h2>
+                  <p id="computer" class="para">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus repudiandae dolorem, ab veniam minus nemo provident laboriosam? Soluta quia earum velit, rem architecto ullam sunt nulla quo? Laboriosam, odit cum!
+
+                  </p>
+            </div>
+      </div>
+      <div class="container">
+            <div id="stationary" class="item">
+                  <h2> stationary</h2>
+                  <p id="stationary" class="para">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus repudiandae dolorem, ab veniam minus nemo provident laboriosam? Soluta quia earum velit, rem architecto ullam sunt nulla quo? Laboriosam, odit cum!
+
+                  </p>
+            </div>
+      </div>
+
+
+
+</body>
+
+</html>

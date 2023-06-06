@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Attribute and nth order pseudo selector </title>
+      <style>
+            .container {
+                  display: block;
+                  width: 233px;
+                  /* margin: 34px 23px; */
+                  margin: auto;
+
+
+            }
+
+            input {
+                  display: block;
+            }
+
+            input[type='text'] {
+                  padding: 23px;
+                  border: 2px solid red;
+
+            }
+
+            a[target] {
+                  font-size: 34px;
+                  color: violet;
+                  text-decoration: none;
+
+            }
+
+            a[target='_self'] {
+                  font-size: 34px;
+                  color: rgb(255, 0, 0);
+                  text-decoration: none;
+
+            }
+            input[type='password']
+            {
+                  color: black;
+                  border: 2px solid rgb(0, 221, 55);
+
+            }
+
+            /* This will css for 3rd child  */
+            li:nth-child(2n+0)
+            {color: rgb(244, 244, 244);
+            }
+            li:nth-child(4)
+            {color: aqua;
+            }
+
+
+            /* Odd child */
+            li:nth-child(odd)
+            {
+                  background-color: green;
+            }
+
+            /* even child */
+            li:nth-child(even)
+            {
+                  background-color: rgb(22, 1, 1);
+            }
+        
+      </style>
+
+</head>
+
+<body>
+
+      <div class="container">
+            <h1> <a href="https://google.com" target="_blank"> Go to google <a> </h1>
+            <h1> <a href="https://facebook.com" target="_self"> Go to facebook </a> </h1>
+            <form action="#" class="form-control">
+                  <input type="text" placeholder="Enter Your Name ">
+                  <input type="password" placeholder="Enter Your Password ">
+                  <input type="submit" value="submit ">
+
+            </form>
+
+            <ul>
+                  <li class="item" id="item1">Item 1</li>
+                  <li class="item" id="item2">Item 2</li>
+                  <li class="item" id="item3">Item 3</li>
+                  <li class="item" id="item4">Item 4</li>
+                  <li class="item" id="item5">Item 5</li>
+                  <li class="item" id="item6">Item 6</li>
+                  <li class="item" id="item7">Item 7</li>
+                  <li class="item" id="item8">Item 8</li>
+                  <li class="item" id="item9">Item 9</li>
+                  <li class="item" id="item10">Item 10</li>
+
+
+
+
+            </ul>
+
+
+
+      </div>
+
+</body>
+
+</html>

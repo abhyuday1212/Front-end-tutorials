@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Flex box</title>
+      <style>
+            .container {
+                  height: 544px;
+                  width: 80%;
+                  border: 2px solid black;
+                  padding: 22px;
+
+
+                  /* Initialise the container as flex box */
+                  display: flex;
+                  /* issse jo display hai ek line me aa jati hai */
+
+                  /* Flex properties for flex container */
+
+                  /* by default flex direction row hoti hai */
+
+                  flex-direction: column;
+                  flex-direction: row;
+            
+                  /* {Default value of flex direction is row } */
+
+
+                  /* flex-direction: column-reverse;
+                  flex-direction: row-reverse; */
+
+                  flex-wrap: wrap;
+                  /* {Default value of flex-wrap is no wrap } /*/
+
+
+                  /* similarly a flex-wrap: wrap- reverse ; option is available */
+
+                  /* --------------------------------------------- */
+
+
+                  /* flex-flow : row-reverse wrap*/
+                  /* Phle flex direction likh do fr flex flow likh do */
+
+
+                  /* flex-flow: row-reverse wrap; */
+                  /* This is a shorthand for flex direction: and flex-wrap: */
+                  /* --------------------------------------------- */
+
+
+                  /* Justify content will justify the content in horizontal direction */
+
+
+                  /* justify-content: center; */
+                  /* justify-content: space-evenly; */
+                  /* justify-content: space-around; */
+                  /* justify-content: space-between; */
+
+
+                  /* --------------------------------------------- */
+
+
+                  /*  align-items: will  align the items in vertical direction */
+
+
+
+                  /* align-items: center; */
+                  /* Verticallly centre krne se hoga */
+
+                  /* align-items: flex-end; */
+                  /* Niche aa jayega */
+
+                  /* align-items: flex-start; */
+                  /* by default */
+
+
+                  /* align-items: stretch; */
+                  /* Equal space bna lega aaps k box me jb chota kiya jayega */
+
+
+
+
+
+
+
+                  /* --------------------------------------------- */
+            }
+
+            .item {
+                  width: 10%;
+                  height: 200px;
+
+                  background-color: tomato;
+                  border: 2px solid rgb(0, 0, 0);
+                  margin: 10px 10px;
+                  padding: 2px 2px;
+
+            }
+
+            #item1 {
+                  /* order: 2;
+                  flex-grow: 3; */
+                  /* Ye jaada space lega as compare to other */
+
+                  /*     flex-shrink: 3; */
+
+
+            }
+
+            #item2 {
+
+                  /* flex-shrink: 2; */
+
+
+
+                  flex-basis: 320px;
+                  /* whwen flex direction is set to row than flex basis will control the width */
+                  /* whwen flex direction is set to column than flex basis will control the height */
+
+
+
+            }
+
+            #item3 {
+                  /* order: 40; */
+                  /* Jiska order bda hoga wo last me aayega */
+
+
+
+                  /* hm ek sath flex: (grow) (shrink) (flex basis) */
+
+                  flex: 2 2 230px ;
+
+            }
+            #item4 {
+                  align-self: flex-start;
+                  align-self: flex-end;
+                  align-self: center;
+                  /* basically horizontal allignment set krne k liye hota hai */
+            }
+      </style>
+</head>
+
+<body>
+      <!-- by default display block form me rhti hmari -->
+      <h1>This is a flexbox</h1>
+      <!-- div.item#item4*6 -->
+      <div class="container">
+
+            <div class="item" id="item1">First Box</div>
+
+            <div class="item" id="item2">Second Box </div>
+
+            <div class="item" id="item3">Third Box</div>
+
+            <div class="item" id="item4">Fourth Box</div>
+
+            <!-- <div class="item" id="item5">Fifth Box</div>
+
+            <div class="item" id="item6">Sixth Box</div> -->
+      </div>
+</body>
+
+</html>

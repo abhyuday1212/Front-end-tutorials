@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title> CSS transition </title>
+
+      <style>
+            #box {
+                  background-color: red;
+                  color: white;
+                  font-size: 38px;
+                  display: flex;
+                  height: 200px;
+                  width: 250px;
+                  justify-content: center;
+                  align-items: center;
+
+
+                  /* transition-property: background-color;
+                  transition-duration: 0.8s;
+                  transition-timing-function: ease-in; */
+                  
+
+                  /* ease in suru me slow jayega fr fast ho jayega */
+                  transition:all 0.5s ease-in-out .03s ;
+
+            }
+
+            #box:hover {
+                  background-color: rgb(4, 253, 50);
+                  height: 400px;
+                  width: 350px;
+                  border-radius: 100px;
+                  font-size: 48px;
+
+                  /* chote se bade hongi height r width  */
+
+
+
+            }
+      </style>
+</head>
+
+<body>
+      <h3>This is CSS Transition tutorial</h3>
+      <di class="container">
+            <div id="box">
+                  This is my box
+
+            </div>
+      </di>
+
+</body>
+
+</html>

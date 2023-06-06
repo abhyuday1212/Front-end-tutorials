@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CSS Gid 2</title>
+      <style>
+.grid{
+      display: grid;
+      grid-template-rows: 1fr 1fr 4fr;
+      grid-auto-rows: 2fr;
+      grid-template-columns: repeat(4,2fr);
+      grid-gap: 2rem;
+
+
+
+}
+.item{
+background-color: burlywood;
+border: 2px solid rebeccapurple;
+}
+      </style>
+</head>
+
+<body>
+      <div class="grid">
+            <div class="item">This is Item 1</div>
+            <div class="item">This is Item 2</div>
+            <div class="item">This is Item 3</div>
+            <div class="item">This is Item 4</div>
+            <div class="item">This is Item 5</div>
+            <div class="item">This is Item 6</div>
+            <div class="item">This is Item 7</div>
+            <div class="item">This is Item 8</div>
+            <div class="item">This is Item 9</div>
+            <div class="item">This is Item 9</div>
+      </div>
+</body>
+
+</html>

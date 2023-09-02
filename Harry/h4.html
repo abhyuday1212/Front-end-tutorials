@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+</head>
+
+<body>
+    <!-- ques
+    
+    
+    
+    -->
+
+
+    <script>
+
+        // Chapter 4 - Practice Set
+        // Problem 1 : What will the following print in javascript ? 
+        console.log(" prb - 1");
+
+        let str = "Har\""
+        console.log(str.length)
+        //     this  -> \"  is a escape sequence character which will be counted as one
+
+
+        // Problem 2 : Explore the includes , startsWith and endswith function of a string
+        console.log(" prb - 2");
+        const sentence = 'The quick brown fox jumps over the lazy dog.';
+        const word = 'fox2';
+        console.log(sentence.includes(word))
+        // this line simply returns true or false as it is the property of   .includes statement 
+
+
+        console.log(`The word "${word}" ${sentence.includes(word) ? "is" : "is not"} in the sentence`);
+
+
+
+        // Problem 3 : wap to convvert a given string to lowercase
+        console.log(" prb - 3");
+        console.log(word.toLowerCase())
+        console.log(word.toUpperCase())
+
+        // Problem 4 : extract the ammount out of this string " please give rs 1000"
+        console.log(" prb - 4 ");
+
+        let str2 = "Please give Rs 1000"
+        // let amount = Number.parseInt(str2.slice("Please give Rs ".length))
+        let amount = Number.parseInt(str2.slice(15))
+        console.log(amount)
+        console.log(typeof amount)
+
+        // Problem 5 : try to choose 4th character of a given string ,were you able to do it ?
+        console.log(" prb - 5");
+
+        let friend = "Deepika"
+        friend[3] = "R"
+        console.log(friend) // friend is not changed, because string is immutable
+
+
+
+    </script>
+
+</body>
+
+</html>

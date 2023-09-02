@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8]
+        console.log(arr.length);
+        delete arr[0]
+        console.log(arr.length)
+
+
+        let num1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        let num_more = [11, 12, 13, 14, 15, 16, 17, 18, 19]
+        let num_even_more = [211, 212, 213, 214, 415, 416, 417, 418, 419]
+
+        let newArray = num1.concat(num_more, num_even_more) //does not change existing array
+        console.log(newArray)
+        console.log(num1, num_more)
+
+        // sort method
+
+        let num4 = [551, 22, 3, 14, 5, 6, 7, 8, 229]
+        num4.sort()  //ye string ke according sort kr rha hai alphabatical not number ki value wise  
+        console.log(num4);
+
+
+
+        let compare = (a, b) => {
+            return b - a //asscending order
+        }
+        let num3 = [551, 22, 3, 14, 5, 6, 7, 8, 229]
+        num3.sort(compare)
+        console.log(num3);
+
+        // num3.reverse()
+
+        // Splice and Slice
+        let num2 = [551, 22, 3, 14, 5, 6, 7, 8, 229]
+        let deletedValues = num2.splice(2, 4, 1021, 1022, 1023, 1024, 1025)
+        //index 2 se delete krega 4 elemnt tk r usk baad jo add krna h un 4 elements ki jgh pe wo likh do
+        // num2.splice ( index of digit jha se changes krne hai , kha tk changes krne hai , jinne values changes kri hai array ki unk bdle wle values ko likh do )
+
+        console.log(num2)
+        console.log(deletedValues)
+
+        // let newNum = num.slice(3) //basically jo digit dalte h usk aage ka r wo number print krta h
+        let newNum2 = num2.slice(3, 5) //last wli index included nhi hoti hai r ye original array ko modify nhi krta hai
+
+        console.log(newNum2)
+
+    </script>
+</body>
+
+</html>

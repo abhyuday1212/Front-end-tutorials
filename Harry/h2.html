@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice set 2 </title>
+</head>
+
+<body>
+    <!-- ques
+    
+    
+    
+    -->
+
+
+    <script>
+
+        // Chapter 2PS
+        // Problem No 1 : Use logical operator to find whether the age of a person lies between 10 aand 20?
+
+            console.log("Problem - 1");
+
+        let age1 = prompt("What is your age?")
+        age1 = Number.parseInt(age1)
+        if (age1 > 10 && age1 < 20) {
+            console.log("Your age lies between 10 and 20")
+        }
+        else {
+            console.log("Your age doesnt lies between 10 and 20")
+        }
+
+
+        // Problem No 2 : Demonstrate the use of switch case statements in javascript
+            console.log("Problem - 2");
+
+        let age2 = prompt("What is your age?")
+        switch (age2) {
+            case '12':
+                console.log("Your age is 12")
+                break
+            case '13':
+                console.log("Your age is 13")
+                break
+            case '14':
+                console.log("Your age is 14")
+                break
+            case '15':
+                console.log("Your age is 15")
+                break
+            default:
+                console.log("Your age is not special")
+        }
+
+        // Problem No 3 : wap a js to find whether a number is divivsible by 2 and 3
+            console.log("Problem - 3");
+
+        let num1 = prompt("What is your age?")
+        num1 = Number.parseInt(num1)
+        if (num1 % 2 == 0 && num1 % 3 == 0) {
+            console.log("Your number is divisible by 2 and 3")
+        }
+        else {
+            console.log("Your number is not divisible by 2 and 3")
+        }
+
+
+        // Problem No 4 : wap js to find that a program is divisible by either 2 or 3
+        console.log("Problem - 4");
+        let num2 = prompt("What is your age?")
+        num2 = Number.parseInt(num2)
+        if (num2 % 2 == 0 || num2 % 3 == 0) {
+            console.log("Your number is divisible by 2 and 3")
+        }
+        else {
+            console.log("Your number is not divisible by 2 and 3")
+        }
+
+
+        // Problem No 5 : print you can drive you cannot drive based on age being grater than 18 using ternary operator
+        
+        console.log("Problem - 5");
+
+        let age3 = 19
+        let a1 = age3 > 18 ? "You can drive" : "You cannot drive"
+        console.log(a1)
+
+
+
+    </script>
+
+</body>
+
+</html>

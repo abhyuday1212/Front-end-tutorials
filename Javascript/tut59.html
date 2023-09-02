@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Date</title>
+</head>
+
+<body>
+      <div class="container">
+          <span id="time">The Time is </span>
+      </div>
+
+
+      <script>
+            // console.log("This is date and time tutorial");
+            // // --------------------------------------------------
+
+            // let dt = new Date();
+            // console.log(dt);
+
+            // let dt1 = new Date(0);
+            // console.log(dt1);
+
+            // // 1000ms= 1s from base date
+
+            // let dt2 = new Date(1000);
+            // console.log(dt2);
+
+            // let newDate = new Date("2029-12-13");
+            // console.log(newDate)
+            // --------------------------------------------------
+            // let newDate = new Date(year, month,date, hours,minutes,seconds,milliseconds);
+            // --------------------------------------------------
+
+            let newDate = new Date(2030, 5, 6, 9, 3, 2, 34);
+            console.log(newDate);
+
+            let yr = newDate.getFullYear();
+            console.log("The year is ", yr);
+
+            let dtn = newDate.getDate();
+            console.log("The date is ", dtn);
+
+            let mon = newDate.getMonth();
+            console.log("The month is ", mon);
+
+            let hr = newDate.getHours();
+            console.log("The hour is ", hr);
+
+
+            newDate.setDate(5);
+            console.log(newDate);
+
+            // use Date.now()  in console to know thw time difference of site reloading page
+            
+            
+            setInterval(updateTime,1000);
+            function updateTime(){
+                  time.innerHTML = new Date();
+            }
+
+      </script>
+</body>
+
+</html>

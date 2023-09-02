@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- sare no. add kro agr inme se koi string nikl jaye to skip kro-->
+
+
+    <script>
+
+        let a = [1, 2, 3, 4, '5'];
+
+        let sum = 0;
+        a.forEach(function (val) {
+            if (typeof val === 'number') {
+                sum = sum + val;
+
+            }
+        })
+
+        console.log(sum)
+
+
+
+
+    </script>
+</body>
+
+</html>

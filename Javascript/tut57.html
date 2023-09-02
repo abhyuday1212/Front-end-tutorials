@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JS events </title>
+
+</head>
+
+<body>
+      <!-- Browser events:
+      Click
+      contextmenu
+      mouseover / mouseout {element k bhr laana mouse}
+      mousedown / mouseup
+      mousemove
+
+
+      submit
+      focus
+
+      DOMContentLoaded -->
+
+      <div class="container">
+            <h1>
+                  This is my heading
+            </h1>
+
+            <p id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus officiis, fuga maxime
+                  vitae facere
+                  laborum hic excepturi unde dignissimos velit ratione porro praesentium numquam quam sunt minima. Fugit
+                  at obcaecati, voluptates assumenda consequatur ea ex illum, nobis eligendi doloremque odio quod earum!
+                  Earum officiis, consectetur, sit eaque recusandae itaque ducimus, nulla ab voluptates ea hic
+                  voluptatem maxime aut. Ex libero fuga reprehenderit harum quod ut ratione soluta nihil unde?</p>
+      </div>
+      <button id="btn" onclick="toggleHide()">Show/Hide</button>
+
+
+
+      <script>
+
+            let para = document.getElementById('para');
+            para.addEventListener('mouseover', function run() {
+                  alert('Mouse Inside')
+                  //  console.log('Mouse Inside');  This can be also used
+
+            });
+
+            para.addEventListener('mouseout', function run() {
+                  console.log('Mouse Outside')
+
+            });
+
+            function toggleHide() {
+                  let btn = document.getElementById('btn');
+                  let para = document.getElementById('para');
+
+                  
+                  if (para.style.display != 'none') {
+                        para.style.display = 'none';
+                  }
+                  else {
+                        para.style.display = 'block';
+                  }
+            }
+
+      </script>
+</body>
+
+</html>

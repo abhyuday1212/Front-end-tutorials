@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+
+<body>
+    <div class="container">
+        This is arrow function Tutorials
+    </div>
+    <script>
+        // 1st method
+        // function greet(){
+        //     console.log('Good morning');
+
+        // }
+        // greet();
+        // --------------------------------------------
+
+        // second method
+        let greet = () => console.log('Good Morning');
+        greet();
+
+        setTimeout(() => {
+            console.log("We are inside set-timeout")
+        }, 3000);
+
+
+        let sum = (a, b) => {
+            return a + b;
+
+        }
+
+        let sum2 = (a, b) => a + b;
+
+        let half = a => a / 2;  //bina bracket lgaye v likh skte h
+
+        let obj1={
+            greeting: "good morning ",
+            names : ["Harry", "Alpha","Akhilace", "Nova"],
+            speak(){
+                this.names.forEach((student)=>{
+                    console.log(this.greeting + "hey gaandu " + student);
+                    
+                    // andr wla this,bhr wle  arrow ya objrct pe pont krega
+                    
+                    //agr function use kr de to arrow functopn apne andr hi this dhudh lega
+                    // jbki arrow function k case me bhr wle ko manata h
+                    // Lexical this
+                });
+            }
+        }
+
+        obj1.speak();
+
+    </script>
+</body>
+
+</html>

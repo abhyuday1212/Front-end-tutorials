@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+
+<body>
+      <div class="conatiner">
+            <h1>function</h1>
+            <p>This is my function </p>
+
+      </div>
+
+      <script>
+            //greet function ka naam hai
+
+
+            //name r greetText function ke ander values pass hui hai
+
+            function greet(name, greetText = "Greetings From Javascirpt") {
+                  // greettext1 apni value greet text k ander daal dega
+
+                  // greettext ko koi value de dene se di hu value nhi print hogi.....jo value pass krai gyi h wo print hogi
+
+
+                  //name1 local hai...bhr koi effect nhi la skta hai 
+                  let name1 = "Name1";
+
+                  // console.log(greetText + " " + name);
+                  console.log(name + " is a good boy");
+            }
+
+
+
+
+            let name1 = "Abhyuday";
+            let name2 = "Alpha";
+            let name3 = "Akhilace";
+            let name4 = "Rohan";
+            let greetText1 = "Good Morning";
+
+
+            //function ko call krna khte hai isse
+
+            greet(name1, greetText1);
+            greet(name2, greetText1);
+            greet(name3, greetText1);
+            greet(name4, greetText1);
+
+let a,b,c;
+
+            function sum(a, b, c) {
+                  let d = a + b + c;
+                  return d;
+
+            }
+            //ye kaam krta hai...return me kuch nhi leke aata hai
+            // let returnVal = greet(name3); 
+            // console.log(returnVal)
+
+            let returnVal = sum(1, 2, 3);
+            console.log(returnVal);
+
+      </script>
+</body>
+
+</html>

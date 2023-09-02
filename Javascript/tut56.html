@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Manipulating DOM</title>
+</head>
+
+<body>
+      <div id="main" class="container">
+            <ul id="nav">
+                  <li>Home</li>
+                  <li>About </li>
+                  <li>Contact US</li>
+                  <li>Services</li>
+                  <li>More About Us</li>
+            </ul>
+      </div>
+
+      <script>
+            let main = document.getElementById('main');
+            console.log(main);
+
+            let nav = document.getElementById('nav');
+            console.log(nav);
+            // ---------------------------------------------
+            // write these in console
+
+            //nav.innerHTML
+
+            //for changing write
+            // nav.innerHTML = " <li> Dynamic element </li> "
+            // ---------------------------------------------
+
+            let containers = document.getElementsByClassName('container');
+            console.log(containers)
+            // ---------------------------------------------
+
+            // Containers[0] -> gives the first container whose class is container
+
+            // Container[1] -> Gives the second container whose class is container
+
+            // *write this in JS
+            // ---------------------------------------------
+
+
+            // let sel = document.querySelector('.container');
+            // console.log("Selector returns", sel);
+
+
+
+            // let navsel = document.querySelector('#nav>li');
+            // console.log("Selector returns", navsel);
+
+            // ---------------------------------------------
+
+
+
+            let navsel = document.querySelectorAll('#nav>li');
+            console.log("Selector returns", navsel);
+
+            // ---------------------------------------------
+
+
+      </script>
+</body>
+
+</html>

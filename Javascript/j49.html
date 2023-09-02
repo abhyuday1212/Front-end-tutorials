@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Javascript | Strings and Strings Methods </title>
+</head>
+
+<body>
+      <div id="container">
+            <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum ratione dolores consequatur
+                  molestias commodi labore ea culpa dolorem perspiciatis debitis.</h1>
+
+      </div>
+      <script>
+            //dono use kr skte h
+            var string = "xyz";
+            var string = 'is';
+            var name = 'alpha';
+            var message = 'This is for aps';
+            console.log(string);
+            //catenation of string
+            console.log(string + name + message);
+
+
+            // iske ander single aur doule dono ticks ko use kr skte hai
+
+            var temp = `${name} is a "wonderfull" avatar and he has secret cod for 'Aps that is ${message}`;
+            console.log(temp);
+
+
+            //for finding the legth of the string name 
+            var len = name.length;
+            console.log(`Length of the name is ${len}`);
+            console.log("Hello world \n Harry");
+            //escape sequence charaxter \n,\t,\b,to print \n use \\n
+
+
+            var y = new string("Tis is printing of y");
+            console.log(y);
+
+
+            document.getElementById('container').innerhtml = '<h3> This is an h3 heading </h3>'
+
+
+      </script>
+</body>
+
+</html>

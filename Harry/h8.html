@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map, Filter & Reduce in JavaScript</title>
+</head>
+
+<body>
+
+    <script>
+        //map tb use krte h jb nya array bnana hota h existing Array ka use krk whereas for each tb use krte hai jb existing array pe kaam krk changes krna hota hai
+
+        let arr = [1, 2, 3, 4, 5]
+        let a = arr.map((value, index, array) => {
+            console.log(value); //value is arrow function which takes the value from arr
+            return value + 1
+        })
+        console.log(a);
+        // console.log(value,index,array);
+
+
+        let arr2 = [45, 34, 23, 3, 2, 89, 30]
+        let a2 = arr2.filter((val_fn) => {
+            return val_fn < 30
+        })
+        console.log(a2);
+
+        // Array reduce function
+
+        let arr3 = [1, 2, 3, 45, 6, 66, 2];
+
+        // Method 1 of writting this
+        let newarr3 = arr3.reduce((h1,h2) => {
+            return (h1 + h2)
+        })
+        console.log(newarr3);
+
+        //function variable ki trh bnaya ja skta js me
+        //  Method 2
+        const reduce_func = (h1, h2) => {
+            return h1 + h2
+        }
+        let newarr4 = arr3.reduce(reduce_func)
+        console.log(newarr3);
+
+
+
+    </script>
+</body>
+
+</html>

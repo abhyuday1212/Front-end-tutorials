@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice set 5</title>
+</head>
+
+<body>
+    <p>hi</p>
+
+
+    <script>
+        // q-1: Create an array of numbers and take input from the user to add numbers to the array
+
+
+        let arr1 = [1, 2, 3, 4, 5, 6]
+        let userInput = prompt("Enter a number")
+        userInputInt = Number.parseInt(userInput)
+        arr1.push(userInputInt)
+        console.log(arr1);
+
+        // q - 2 : Keep adding numbers to the array in 1 untill 0 is added to the array
+
+
+        let arr2 = [1, 2, 3, 4, 5, 6]
+        let userInput2
+        do {
+            userInput2 = Number.parseInt(prompt("Enter a number"))
+
+            arr2.push(userInput2)
+        }
+        while (userInput2 != 0)
+        console.log(arr2);
+
+        // q - 3 : filter numbers divisiblre by 10  from a given array
+
+        let arr3 = [1, 2, 3, 4, 5, 6, 20, 50, 90, 12, 32, 34]
+
+        let n = arr3.filter((x) => {
+            return (x % 10 == 0)
+
+        })
+        console.log(n);
+
+
+
+        // q - 4 : wap of array of square of a given number
+
+
+        let arr5 = [1, 2, 3, 4, 5, 6, 20, 50, 90, 12, 32, 34]
+
+        let new_arr = arr5.map((x) => {
+            return (x * x)
+
+        })
+        console.log(new_arr);
+
+
+        // q - 5 : use  reduce to calculate factorial of a given number from an array of first n natural number ( n being the number where factorial value to be calculated) 
+
+        let arr4 = [1, 2, 3, 4, 5]
+
+        let f = arr4.reduce((x1, x2) => {
+            return (x1 * x2)
+
+        })
+        console.log(f);
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+</head>
+
+<body>
+    // Exercise 1: Guess the number
+    // Prize Amount: Rs 500 Amazon voucher
+    // let number = 0 // Generate random number here
+    // let chances = 0
+    // Keep asking for the number until the correct number is guessed
+    // Increment the chances variable
+
+    // Eventually after the game is over, display the (100 - Number of chances) and the actual number
+
+
+    <script>
+        let x = Math.random() * 10;
+        x = Number.parseInt(x)
+        let score = 10
+        let chance = 10
+        let userInput
+
+        while (x != userInput) {
+            userInput = prompt("Guess the number")
+            chance--
+            if (x == userInput) {
+                console.log("Congrats you guessed the right number and your score is " + score)
+            }
+            else if (chance == 0) {
+                console.log("You Lost the game")
+            }
+            else {
+                console.log("You guessed the wrong number! Only " + (chance) + " chances remaining")
+            }
+            --score
+        }
+
+        score = score - 1
+
+
+    </script>
+</body>
+
+</html>

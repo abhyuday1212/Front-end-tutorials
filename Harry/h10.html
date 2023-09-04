@@ -19,28 +19,28 @@
 
 
     <script>
-        let x = Math.random() * 10;
-        x = Number.parseInt(x)
-        let score = 10
-        let chance = 10
-        let userInput
+        
+            let x = Math.random() * 10;
+            x = Number.parseInt(x)
+            let score = 10
+            let chance = 10
+            let userInput
 
-        while (x != userInput) {
-            userInput = prompt("Guess the number")
-            chance--
-            if (x == userInput) {
-                console.log("Congrats you guessed the right number and your score is " + score)
+            while (x != userInput) {
+                userInput = prompt("Guess the number")
+                chance--
+                if (x == userInput) {
+                    console.log("YOU WON!\nSCORE :  " + score)
+                }
+                else if (chance == 0) {
+                    userInput = ""
+                    console.log("You Lost the game")
+                }
+                else {
+                    console.log("Try Again! Only " + (chance) + " chances remaining \n")
+                }
+                --score
             }
-            else if (chance == 0) {
-                console.log("You Lost the game")
-            }
-            else {
-                console.log("You guessed the wrong number! Only " + (chance) + " chances remaining")
-            }
-            --score
-        }
-
-        score = score - 1
 
 
     </script>

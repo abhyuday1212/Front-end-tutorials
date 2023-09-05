@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+</head>
+
+<body>
+    <!--  Exercise 1: Guess the number
+   Prize Amount: Rs 500 Amazon voucher
+   let number = 0 // Generate random number here
+    let chances = 0
+   Keep asking for the number until the correct number is guessed
+   Increment the chances variable
+
+   Eventually after the game is over, display the (100 - Number of chances) and the actual number -->
+
+
+    <script>
+
+        let x = Math.random() * 100;
+        x = Number.parseInt(x)
+        let score = 100
+        let chance = 100
+        let userInput = null
+
+        while (x != userInput) {
+
+            userInput = prompt("Guess the number")
+
+            chance--
+            score = score - 1;
+
+
+            if (x == userInput) {
+                console.log(`YOU WON!\nYou Guessed this in ${100 - score} chances`)
+                alert("Game Over")
+            }
+
+            else if (userInput > x && userInput < 100) {
+                console.log("Your number is greater than the actual number\n Only " + (chance) + " chances remaining \n");
+
+            }
+            else if (userInput < x && userInput > 0) {
+                console.log("Your Number is smaller than the actual number\n Only " + (chance) + " chances remaining \n");
+            }
+
+            else if (userInput < 0 || userInput > 100) {
+                console.log("Enter a number between 1 to 100")
+            }
+            else if (chance == 0) {
+                userInput = ""
+                console.log("You Lost the game")
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

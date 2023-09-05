@@ -20,26 +20,40 @@
 
     <script>
 
-        let x = Math.random() * 10;
+        let x = Math.random() * 100;
         x = Number.parseInt(x)
-        let score = 10
-        let chance = 10
-        let userInput
+        let score = 100
+        let chance = 100
+        let userInput = null
 
         while (x != userInput) {
+
             userInput = prompt("Guess the number")
+
             chance--
+            score = score - 1;
+
+
             if (x == userInput) {
-                console.log("YOU WON!\nSCORE :  " + score)
+                console.log(`YOU WON!\nYou Guessed this in ${100 - score} chances`)
+                alert("Game Over")
+            }
+
+            else if (userInput > x && userInput < 100) {
+                console.log("Your number is greater than the actual number\n Only " + (chance) + " chances remaining \n");
+
+            }
+            else if (userInput < x && userInput > 0) {
+                console.log("Your Number is smaller than the actual number\n Only " + (chance) + " chances remaining \n");
+            }
+
+            else if (userInput < 0 || userInput > 100) {
+                console.log("Enter a number between 1 to 100")
             }
             else if (chance == 0) {
                 userInput = ""
                 console.log("You Lost the game")
             }
-            else {
-                console.log("Try Again! Only " + (chance) + " chances remaining \n")
-            }
-            --score
         }
 
 

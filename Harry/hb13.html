@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake , water & Gun</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        let score = 0;
+        let chance = 0;
+
+        const alphabet = "rps";
+        function generateRandomLetter() {
+            return alphabet[Math.floor(Math.random() * alphabet.length)];
+        }
+
+        function getAlphabetName(letter) {
+            switch (letter) {
+                case "r":
+                    return "Rock";
+                case "p":
+                    return "Paper";
+                case "s":
+                    return "Scissor";
+                default:
+                    return "";
+            }
+        }
+
+        let runAgain = true;
+
+        while (runAgain) {
+            const randomAlphabet = generateRandomLetter();
+            const userChoice = prompt("Enter an alphabet between r, p, s\nr = rock | p = paper | s = scissor\n");
+
+            //new way
+            //   else if (u != "r" && u != "p" && u != "s") {
+            //     alert("Enter a valid aphabet between r , p, s\nr = rock | p = paper | s = scissor")
+            //     chance++
+            // }
+            if (!["r", "p", "s"].includes(userChoice)) {
+                alert("Enter a valid alphabet between r, p, s\nr = rock | p = paper | s = scissor");
+                chance++;
+
+            }
+
+            else if (userChoice === randomAlphabet) {
+                const aiAlphabet = getAlphabetName(randomAlphabet);
+                alert(`It's a draw\nYou both predicted ${aiAlphabet}`);
+                score += 0.5;
+                chance++;
+            }
+
+            else if (
+                (userChoice === "r" && randomAlphabet === "s") ||
+                (userChoice === "s" && randomAlphabet === "p") ||
+                (userChoice === "p" && randomAlphabet === "r")
+            ) {
+                const aiAlphabet = getAlphabetName(randomAlphabet);
+                alert(`You won!\nAI predicted ${aiAlphabet}`);
+                score++;
+                chance++;
+            }
+
+            else {
+                const aiAlphabet = getAlphabetName(randomAlphabet);
+                alert(`Try Try but Don't Cry!\nAI Won! It predicted ${aiAlphabet}`);
+                chance++;
+            }
+
+            if (confirm("Do you want to play again?")) {
+                runAgain = true;
+            } else {
+                runAgain = false;
+                alert(`Game completed!\nYour Score: ${score} in ${chance} chances`);
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

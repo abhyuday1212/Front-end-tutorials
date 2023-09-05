@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Set 6</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Q-1 : Wap using prompt to take input of age as a value from the user and use alert to tell him that he can drive
+
+        let age1 = prompt("Enter Your age")
+        age1 = Number.parseInt(age1)
+
+        const CanDrive1 = (age1) => {
+            return age1 >= 18 ? true : false
+        }
+
+
+        if (CanDrive1(age1)) {
+            alert("He Can drive")
+        }
+        else {
+            alert("He Cannot drive")
+        }
+
+
+
+        // Q - 2 : In q1 use confirm to ask the user if he wants to see the prompt again 
+
+
+
+
+        let runAgain2 = true;
+        const CanDrive2 = (age2) => {
+            return age2 >= 18 ? true : false
+        }
+
+        while (runAgain2) {
+
+            let age2 = prompt("Enter Your age")
+            age2 = Number.parseInt(age2)
+
+            if (canDrive2(age2)) {
+                alert("Yes you can drive")
+            }
+            else {
+                alert("You cannot drive")
+            }
+            runAgain3 = confirm("Do you want to play again?")
+        }
+
+
+        // Q - 3 :  Inprev .  ques use console.error to log the error if the age entered is negative
+
+
+        let runAgain3 = true;
+        const CanDrive3 = (age3) => {
+            return age3 >= 18 ? true : false
+        }
+
+        while (runAgain3) {
+
+            let age3 = prompt("Enter Your age")
+            age3 = Number.parseInt(age3)
+            if (age3 < 0) {
+                console.error("Enter a valid age")
+                break;
+            }
+            if (canDrive3(age3)) {
+                alert("Yes you can drive")
+            }
+            else {
+                alert("You cannot drive")
+            }
+            runAgain3 = confirm("Do you want to play again?")
+
+        }
+
+
+
+        // not part of code
+
+        // if (confirm("Press a button!") == true) {
+        //     text = "You pressed OK!";
+        // } else {
+        //     text = "You canceled!";
+        // }
+        // }
+
+
+
+        //Q - 4 : wap to change the url to google.com ( redirection ) if user enters a number greater than 4
+        let num4 = prompt("Enter your number")
+        num4 = Number.parseInt(num4)
+
+        if (num4 > 4) {
+            location.href = "https://google.com"
+        }
+
+
+
+
+        //QW - 5 : Change the bg of page to red or any other color based on user
+
+        let color = prompt("Enter the bg color")
+        document.body.style.backgroundColor = color
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

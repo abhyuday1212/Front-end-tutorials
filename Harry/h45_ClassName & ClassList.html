@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        .yellow {
+            background-color: yellow;
+            color: white;
+        }
+
+        .red {
+            background-color: red;
+            color: white;
+        }
+
+        .text-dark {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="first" class="yellow text-dark">
+        <span>Hey I am good</span>
+    </div>
+
+    <script>
+        let first = document.getElementById('first')
+        first.className = "text-black red"
+        first.classList.add("red")
+        first.classList.remove("red")
+        first.classList.contains("red")
+        first.classList.toggle("red")
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>setTimeout and setInterval</title>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        .bulb {
+            background: yellow;
+        }
+
+        .bulbcontainer {
+            height: 341px;
+            width: 341px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- //q-1 wap ro show different alerts if different button are clicked -->
+
+    <button onclick="alert('Please give me one plate of Chowmein')">Chow</button>
+    <button onclick="alert('Please give me one plate of vada pow')">Pow</button>
+    <button onclick="alert('Please give me one plate of vada Wow')">Wow</button>
+    <!-- ------------------------------------------------------ -->
+    <!-- //q-2 create a website which is capable of storing bokmarks of your favourite websites using href -->
+
+    <h1>Bookmarks</h1>
+    <button id="google">Google</button>
+    <button id="fb">Facebook</button>
+    <a href="https://twitter.com"> <button id="twitter">Twitter</button></a>
+
+
+    <div id="bulb" class="bulbcontainer bulb">
+    </div>
+
+
+    <script>
+
+
+
+        //q-2 create a website which is capable of storing bokmarks of your favourite websites using href
+        // q-3 repeat q-2 using event listener
+
+        document.getElementById("google").addEventListener("click", function () {
+            window.location = "https://www.google.com";
+            win.focus();
+
+        })
+
+
+        document.getElementById("fb").addEventListener('click', function () {
+            window.location = "https://fb.com"
+            win.focus()
+        })
+
+
+        //q-4 write a js code to keep fetching contents of a website (Every 5 seccond)
+        const fetchContent = async (url) => {
+            con = await fetch(url);
+            let a = await con.json()
+            return a;
+        }
+
+        setInterval(async function () {
+            let url = "https://jsonplaceholder.typicode.com/todos/1"
+            console.log(await fetchContent(url))
+        }, 3000)
+
+
+        //q-5 create a glowing bulb effect using classlist toggle in js
+
+        setInterval(async function () {
+            document.querySelector("#bulb").classList.toggle("bulb")
+        }, 300)
+
+
+
+
+    </script>
+</body>
+
+</html>

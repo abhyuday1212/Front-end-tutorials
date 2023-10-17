@@ -14,7 +14,6 @@ body {
     justify-content: center;
     align-items: center;
     background: #FAF3E0;
-    z-index: -10;
 }
 
 
@@ -83,8 +82,8 @@ body {
 
 .hr,
 .min {
-    font-size: 6.5em;
-    width: 125px;
+    font-size: 5.5em;
+    width: 145px;
 }
 
 .dot {
@@ -138,13 +137,16 @@ body {
 .togglebtn {
     position: absolute;
     right: 15px;
-    top: 5px;
+    top: 15px;
+    z-index: 100;
 }
 
-
+.dot-menu-btn {
+    z-index: 1000;
+}
 
 .dot-menu {
-    z-index: 1000;
+    z-index: 10;
     position: absolute;
     top: 7px;
     right: 5px;
@@ -181,8 +183,7 @@ body {
     height: 15px;
     background: #485470;
     border-radius: 75px;
-    box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1),
-        inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 2px 2px 4px rgba(255, 255, 255,0.1),inset -2px -2px 4px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     display: flex;
     justify-content: center;

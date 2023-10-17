@@ -1,4 +1,4 @@
-const formatSwitchBtn = document.querySelector(".format-switch-btn");
+let formatSwitchBtn = document.querySelector(".format-switch-btn");
 
 formatSwitchBtn.addEventListener("click", () => {
   formatSwitchBtn.classList.toggle("active");
@@ -12,30 +12,25 @@ formatSwitchBtn.addEventListener("click", () => {
   }
 });
 
-let hr = document.getElementById("hr");
-let min = document.getElementById("min");
-let sec = document.getElementById("sec");
-let ms = document.getElementById("ms");
 let timetype = document.getElementById("timetype");
-let period = "AM";
+
 
 let crnt_dt = document.getElementById("crnt_dt");
 let display_time = document.getElementById("#display_time");
 
-// let newDate = new Date(2030, 5, 6, 9, 3, 2, 34);
 setInterval(() => {
   let dt = new Date();
   crnt_dt.innerHTML = dt.toDateString();
 
-  hr.innerHTML = dt.getHours();
-  min.innerHTML = dt.getMinutes();
-  sec.innerHTML = dt.getSeconds();
+  let hr = dt.getHours();
+  let min = dt.getMinutes();
+  let sec = dt.getSeconds();
 
   // Time Format
   if (hr >= 12) {
     timetype.innerHTML = "PM";
   } else {
-    timetype.innerHTML = "AM";
+    timetype = "AM";
   }
 
   //set 12 hour clock format
@@ -44,6 +39,11 @@ setInterval(() => {
   if (formatValue === "12") {
     hr = hr > 12 ? hr % 12 : hr;
   }
+
+  document.querySelector("#hr").innerHTML = hr;
+  document.querySelector("#min").innerHTML = min;
+  document.querySelector("#timetype").innerHTML = timetype;
+  document.querySelector("#sec").innerHTML = sec;
 }, 1000);
 
 // toggle-switch button

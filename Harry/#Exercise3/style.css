@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fab22e;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+h1 {
+    margin: 1rem 0.2rem;
+    font-size: 12vh;
+    max-height: 12rem;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #f4ad2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.box {
+    z-index: 5;
+    font-family: sans-serif;
+    background-color: #15161a;
+    min-width: 40%;
+    max-width: 100%;
+    min-height: 65%;
+    max-height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+    padding: 1rem;
+    border: 4px solid #f4ad2c;
+    border-radius: 30px;
+    box-shadow: 0 0 12px 5px hsl(193, 38%, 86%);
+    color: white;
+    width: 100%;
+    animation-name: animate;
+    animation-duration: 2s;
+    animation-delay: linear;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes animate {
+    0% {
+
+        border-top: 4px solid crimson;
+
+    }
+
+    25% {
+        border-left: 4px solid rgb(72, 255, 0);
+
+    }
+
+    50% {
+        border-bottom: 4px solid crimson;
+    }
+
+    100% {
+        border-right: 4px solid rgb(114, 230, 250);
+    }
+
+}
+
+.jokes {
+    margin-bottom: 2rem;
+    /* margin-left:16rem; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    place-items: center;
+
+}
+
+
+.btn {
+    margin-top: 10vh;
+    border: none;
+    outline: none;
+    background: #15161a;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 50px;
+    cursor: pointer;
+    word-spacing: 4px;
+
+}
+
+.btn:hover {
+    background-color: crimson;
+    color: white;
+    border: 1px solid black;
+    opacity: 0.8;
+    font-weight: 400;
+    word-spacing: 4px;
+}
+
+#content {
+    margin: auto;
+    padding: 4vh;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin-top: 5vh;
+    font-family: sans-serif;
+}
+
+@media screen and (max-width: 483px) {
+    h1 {
+        margin: 1rem 0.2rem;
+        font-size: 8.5vh;
+        max-height: 10rem;
+        word-wrap: none;
+    }
+
+    #content {
+        margin: auto;
+        padding: 4vh;
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin-top: 5vh;
+        font-family: sans-serif;
+    }
+
+}
+
+@media screen and (min-width:300px) and (max-width: 482px) {
+
+    h1 {
+        margin: 1rem 0.2rem;
+        font-size: 7.1vh;
+        max-height: 10rem;
+        word-wrap: none;
+    }
+
+    #content {
+        font-size: .9rem;
+        font-weight: 100;
+    }
+
+    .btn {
+        margin-top: 10vh;
+        border: none;
+        outline: none;
+        background: #15161a;
+        color: white;
+        border: 2px solid white;
+        padding: 6px 40px;
+        cursor: pointer;
+        word-spacing: 4px;
+        font-size: .7rem;
+
+    }
+}
+
+@media screen and (min-width:200px) and (max-width: 299px) {
+
+    h1 {
+        /* margin: 1rem 0.2rem; */
+        font-size: 1.2rem;
+        font-weight: 800;
+        word-wrap: none;
+    }
+
+    #content {
+        font-size: .75rem;
+        font-weight: 100;
+    }
+
+    .btn {
+        margin-top: .8rem;
+        border: none;
+        outline: none;
+        background: #15161a;
+        color: white;
+        border: 2px solid white;
+        padding: 3px 40px;
+        cursor: pointer;
+        word-spacing: 4px;
+        font-size: .8rem;
+
+    }
+
+    .box {
+        z-index: 5;
+        font-family: sans-serif;
+        background-color: #15161a;
+        min-width: 40%;
+        max-width: 100%;
+        min-height: 55%;
+        max-height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* position: absolute; */
+        padding: 0.1rem;
+        border: 4px solid #f4ad2c;
+        border-radius: 30px;
+        box-shadow: 0 0 12px 5px hsl(193, 38%, 86%);
+        color: white;
+        width: 100%;
+        animation-name: animate;
+        animation-duration: 2s;
+        animation-delay: linear;
+        animation-iteration-count: infinite;
+
+    }
+}

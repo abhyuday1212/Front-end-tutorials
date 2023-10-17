@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awsome -->
+
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <link rel="iconstyling" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="box">
+
+        <div class="togglebtn" id="togglebtn">
+            <i class="fa-solid fa-ellipsis-vertical fa-flip dot-menu-btn" id="active-menu"></i>
+            
+            <ul class="dot-menu" id="active-menu">
+                <li class="menu-item" id="active-menu">
+                    <span class="clock-format-text" id="active-menu">24-Hour Format</span>
+                    <div class="format-switch-btn" id="active-menu" date-format="12"></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time">
+
+
+            <div id="hr" class="hr"></div>
+            <div class="dot" id="dot">:</div>
+            <div id="min" class="min"></div>
+
+
+            <div class="box2">
+                <span class="timetype" id="timetype"></span>
+                <div class="sec" id="sec"></div>
+            </div>
+
+
+        </div>
+
+        <div class="crnt_dt" id="crnt_dt"></div>
+
+
+    </div>
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -12,7 +12,8 @@
 
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 
-    <link rel="iconstyling" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 
 </head>
 
@@ -20,17 +21,23 @@
 
     <div class="box">
 
-        <div class="togglebtn" id="togglebtn">
+        
+            <div class="dot-menu-btn" id="active-menu" >
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
 
-            <i class="fa-solid fa-ellipsis-vertical fa-flip dot-menu-btn"  id="active-menu"></i>
-            
-            <ul class="dot-menu" id="active-menu">
-                <li class="menu-item" id="active-menu">
-                    <span class="clock-format-text" id="active-menu">24-Hour Format</span>
-                    <div class="format-switch-btn" id="active-menu" date-format="12"></div>
+            <ul class="dot-menu">
+                <li class="menu-list">
+                    <span class="clock-format-text">24-Hour Format</span>
+                    <div class="time-format-btn" ></div>
+                </li>
+                <li class="menu-item">
+                    <span class="clock-format-text">Set Alarm</span>
+                    <div class="timeformat" ></div>
                 </li>
             </ul>
-        </div>
+      
+
 
         <div class="time">
 

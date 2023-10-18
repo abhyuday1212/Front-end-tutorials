@@ -5,6 +5,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 
@@ -33,7 +37,7 @@ body {
     flex-direction: column;
 }
 
-.box:before {
+.box::before {
     content: '';
     position: absolute;
     background: linear-gradient(45deg, #24ff6d, #2f93f1, #ff5e9a);
@@ -138,15 +142,23 @@ body {
     position: absolute;
     right: 15px;
     top: 15px;
-    z-index: 100;
+    z-index: 2000;
+    cursor: grab;
 }
 
+
 .dot-menu-btn {
-    z-index: 1000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    color: #000000;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
 .dot-menu {
-    z-index: 10;
+    z-index: 100;
     position: absolute;
     top: 7px;
     right: 5px;
@@ -156,16 +168,17 @@ body {
     border-radius: 5px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
     visibility: hidden;
-    opacity: 0;
+    opacity: 1;
     transition: 0.4s ease;
 }
 
 .dot-menu.active {
+    z-index: 1000;
     visibility: visible;
     opacity: 1;
 }
 
-.menu-item {
+.menu-list {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -178,19 +191,20 @@ body {
     margin-right: 20px;
 }
 
-.format-switch-btn {
+.time-format-btn {
     width: 35px;
     height: 15px;
     background: #485470;
     border-radius: 75px;
-    box-shadow: inset 2px 2px 4px rgba(255, 255, 255,0.1),inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+        inset -2px -2px 4px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.format-switch-btn:before {
+.time-format-btn::before {
     content: '';
     position: absolute;
     width: 14px;
@@ -203,7 +217,7 @@ body {
     transition-property: background, transform;
 }
 
-.format-switch-btn.active:before {
+.time-format-btn.active::before {
     background: #0bff8d;
     box-shadow: 0 5px 25px #0bff8d;
     transform: translateX(10px);

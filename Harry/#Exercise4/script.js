@@ -1,24 +1,22 @@
-let formatSwitchBtn = document.querySelector(".format-switch-btn");
+let timeformatbtn = document.querySelector(".time-format-btn");
+let formatValue = "12"; 
 
-formatSwitchBtn.addEventListener("click", () => {
-  formatSwitchBtn.classList.toggle("active");
-
-  var formatValue = formatSwitchBtn.getAttribute("date-format");
+timeformatbtn.addEventListener("click", () => {
+  timeformatbtn.classList.toggle("active");
 
   if (formatValue === "12") {
-    formatSwitchBtn.setAttribute("date-format", "24");
+    timeformatbtn.setAttribute("time-format-val", "24");
+    formatValue = "24"; 
   } else {
-    formatSwitchBtn.setAttribute("date-format", "12");
+    timeformatbtn.setAttribute("time-format-val", "12");
+    formatValue = "12"; 
   }
 });
 
 let timetype = document.getElementById("timetype");
-
-
 let crnt_dt = document.getElementById("crnt_dt");
-let display_time = document.getElementById("#display_time");
 
-setInterval(() => {
+setInterval(function updateClock(){
   let dt = new Date();
   crnt_dt.innerHTML = dt.toDateString();
 
@@ -30,32 +28,38 @@ setInterval(() => {
   if (hr >= 12) {
     timetype.innerHTML = "PM";
   } else {
-    timetype = "AM";
+    timetype.innerHTML = "AM";
   }
 
-  //set 12 hour clock format
-  var formatValue = formatSwitchBtn.getAttribute("date-format");
-
+  // Set 12-hour clock format
   if (formatValue === "12") {
     hr = hr > 12 ? hr % 12 : hr;
   }
 
   document.querySelector("#hr").innerHTML = hr;
   document.querySelector("#min").innerHTML = min;
-  document.querySelector("#timetype").innerHTML = timetype;
   document.querySelector("#sec").innerHTML = sec;
 }, 1000);
 
-// toggle-switch button
+// Toggle-switch button
 
-const dotmenuBtn = document.querySelector(".dot-menu-btn");
-const dotMenu = document.querySelector(".dot-menu");
-dotmenuBtn.addEventListener("click", () => {
-  dotMenu.classList.toggle("active");
+let dotmenuBtn = document.querySelector(".dot-menu-btn");
+let dotmenu = document.querySelector(".dot-menu");
+
+dotmenuBtn.addEventListener("click", (e) => {
+  dotmenu.classList.toggle("active");
+  e.stopPropagation(); 
+   clearInterval(intervalId);
 });
 
 document.addEventListener("click", (e) => {
-  if (e.target.id !== "active-menu") {
-    dotMenu.classList.remove("active");
+  if (!dotmenu.contains(e.target) && !dotmenuBtn.contains(e.target)) {
+    dotmenu.classList.remove("active");
+    intervalId = setInterval(updateClock, 1000); // Restart the clock update interval
   }
 });
+
+
+
+
+

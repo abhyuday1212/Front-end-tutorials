@@ -209,7 +209,7 @@ body {
     position: absolute;
     width: 14px;
     height: 14px;
-    background: #ff5e9a;
+    background: #fc005c;
     border-radius: 50%;
     box-shadow: 0 5px 25px #ff5e9a;
     transform: translateX(-10px);
@@ -218,7 +218,7 @@ body {
 }
 
 .time-format-btn.active::before {
-    background: #0bff8d;
+    background: #00ff88;
     box-shadow: 0 5px 25px #0bff8d;
     transform: translateX(10px);
 }

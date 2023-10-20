@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        var p1 = new Promise((resolve, reject) => {
+            console.log("Promise is Pending");
+
+            setTimeout(() => {
+                // console.log("I am promise and i am resolved");
+                resolve(true)
+            }, 4000);
+
+        })
+
+
+        let p2 = new Promise(function (resolve, reject) {
+            console.log("Promise is Pending");
+
+            setTimeout(() => {
+                // console.log("I am Promise and i am rejected");
+                reject(new Error("I am error"))
+            }, 4000);
+
+        })
+
+
+        // console.log(p1,p2);
+
+
+        p1.then((value) => {
+            console.log(value);
+        })
+
+        // To catch the errors
+        // p2.catch((error) => {
+        //         console.log("some error occurred in p2")
+        // })
+
+
+        //Method 2 of writing
+
+        p2.then((value) => {
+            console.log(value)
+
+
+        }, (error) => {
+            console.log(error)
+        })
+
+
+
+
+
+    </script>
+</body>
+
+</html>

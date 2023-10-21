@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error object</title>
+</head>
+
+<body>
+    <script>
+
+        // try {
+        //     alpha
+        // }
+        // catch (error) {
+        //     console.log(error.name);
+        //     console.log(error.message);
+        //     console.log(error.stack);
+        // }
+
+        // =============================
+
+        // try {
+        //     //custom error
+        //     throw new ReferenceError("Alpha is not good")
+        // } catch (error) {
+
+        //         console.log(error.name);
+        //         console.log(error.message);
+
+        // }
+
+// ===========================
+// if you are using stack then custom error line will not work, in this case :--> "Alpha is not good"
+
+
+        // try {
+        //     //custom error
+        //     console.log(Systummmmm);
+        //     throw new ReferenceError("Alpha is not good")
+        // } catch (error) {
+
+        //         console.log(error.name);
+        //         console.log(error.message);
+        //         console.log(error.stack);
+
+        // }
+
+// ===========================================
+    try {
+        let age = prompt("Enter your age")
+        age = Number.parseInt(age)
+        if (age > 150) {
+            throw new ReferenceError("This is probably not true")
+        }
+    } catch (error) {
+        console.log(error.name)
+        console.log(error.message)
+        console.log(error.stack)
+    }
+
+    console.log("The script is still running")
+
+
+
+
+    </script>
+</body>
+
+</html>
